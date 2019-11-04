@@ -2,10 +2,10 @@ Rails.application.routes.draw do
   devise_for :users
   root  'tweets#index'                       #ルートパスの指定
 
-  resources :tweets do                    #tweets_controllerに対してのresourcesメソッド
-    resources :comments, only: [:create]  #doとendで挟むことで中の記述をネストさせる
-  end
-  resources :users, only: [:show]       #users_controllerに対してのresourcesメソッド
+  # resources :tweets do                    #tweets_controllerに対してのresourcesメソッド
+  #   resources :comments, only: [:create]  #doとendで挟むことで中の記述をネストさせる
+  # end
+  # resources :users, only: [:show]       #users_controllerに対してのresourcesメソッド
 
   # get   'tweets'      =>  'tweets#index'     #ツイート一覧画面  
   # get   'tweets/new'  =>  'tweets#new'       #ツイート投稿画面
